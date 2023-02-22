@@ -87,7 +87,7 @@
       <div class="col-lg-4 lead">
         <img class="rounded-circle" src="https://media.licdn.com/dms/image/C4D0BAQFhi_fbDqYe3g/company-logo_200_200/0/1554399299344?e=1683763200&v=beta&t=fNzcVFxDDT77Ykobqgoe8sbh6XMsuJO5OlavQbXA53s" alt="Generic placeholder image" width="140" height="140">
         <h2>Movitech</h2>
-        <p>Empresa na qual atualmente estou trabalhando.</p>
+        <p>Empresa na qual tive minha primeira experiência como progamador.</p>
 
       </div>
       <div class="col-lg-4 lead">
@@ -175,73 +175,7 @@
         <h2 class="d-flex align-items-center">ENVIE UMA MENSAGEM<span class="text-muted"></span></h2> 
         
         </div>
-        <br>
-          
-       
-          
-
-        <form id="formulario" action="{{url("/")}}" method="POST">
-          
-          @csrf
-          <fieldset> 
-          <div class="form-group">
-            @if(count($errors)>0)
-          <div class="alert alert-warning alert-dismissable fade show" role="alert">
-            <strong>Dados informados inválidos!!</strong>
-            <ul>
-              @foreach($errors->all() as $error)
-                <li>{{ $error }}</li>
-              @endforeach
-            </ul>  
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          @endif
-          
-          @if ($message = Session::get('success'))
-          <div class="alert alert-success alert-dismissable fade show" role="alert">
-              <strong>Obrigado</strong> {{ @message }}  
-              <button type="button" class = "close" data-dismiss="alert" aria-label="Fechar">
-                <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          @endif
-  
-        @if ($message = Session::get('error'))
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-          <strong>{{ $message }}</strong>
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        @endif
-            <label for="nome"><h6 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Seu nome</h6></label>
-            <div id="firstbtn">
-              <input name="nome" type="text" id="campo_nome" class="form-control" placeholder="Digite seu nome ">
-        
-            </div>
-
-            </div>
-
-          <div class="form-group">
-            <label for="email"><h6 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Seu email</h6></label>
-            <div id="secondbtn">
-            <input type="email" id="campo_email" class="form-control"  placeholder="Digite seu email ">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1"><h6 style="">Sua mensagem</h6></label>
-            <div id="textarea">
-            <textarea id="msg" style="resize: none; border-radius: 10px" class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
-            </div>
-         </div>
-
-          <div id="submitbtn">
-            <button class= "btn btn-outline-successs" style="
-            border-radius: 30rem; color: rgb(0, 0, 0); background-image: radial-gradient( circle 780.6px at 10% 20%,  rgba(133,255,189,1) 0%, rgba(255,251,125,1) 90.7% ); " id="btn_submit" type="submit" >Enviar</button>
-          </div>
-
-          </fieldset>
+         
         </form>
         </div>
       </div>
@@ -272,9 +206,6 @@
         </div>
     </footer>
 </div>
-
-
-
 
 <script type="text/javascript">
 
